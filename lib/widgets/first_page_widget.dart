@@ -1,13 +1,23 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
-class MapLeme extends StatelessWidget {
-  const MapLeme({super.key});
+class MapAll extends StatelessWidget {
+  final String textManagerTitle;
+  final String textManagerBody;
+
+  const MapAll({
+    super.key,
+    required this.textManagerBody,
+    required this.textManagerTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
+    var screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
-      height: 250,
-      width: 700,
+      width: screenWidth * 0.8,
       alignment: Alignment.center,
       decoration: const BoxDecoration(
         color: Color.fromARGB(11, 103, 80, 164),
@@ -15,47 +25,22 @@ class MapLeme extends StatelessWidget {
           Radius.circular(28),
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: const Column(
+      padding: const EdgeInsets.all(10),
+      child: Column(
         children: [
           Text(
-            'Pontos turísticos de Leme-SP',
+            textManagerTitle,
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class MapLimeira extends StatelessWidget {
-  const MapLimeira({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 250,
-      width: 700,
-      alignment: Alignment.center,
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(11, 103, 80, 164),
-        borderRadius: BorderRadius.all(
-          Radius.circular(28),
-        ),
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: const Column(
-        children: [
-          Text(
-            'Pontos turísticos de Limeira-SP',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+          SizedBox(
+            height: 10,
           ),
+          Text(
+            textManagerBody,
+          )
         ],
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets/first_page_widget.dart';
 
+import '../texts/texts.dart';
+
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
 
@@ -36,22 +38,34 @@ class FirstPage extends StatelessWidget {
             Container(
               color: Colors.white60,
               alignment: Alignment.center,
-              child: const MapLeme(),
+              child: MapAll(
+                textManagerBody: TextManagerLeme().getText(),
+                textManagerTitle: TextManagerTitleLeme().getText(),
+              ),
             ),
             Container(
               color: Colors.white60,
               alignment: Alignment.center,
-              child: const MapLimeira(),
+              child: MapAll(
+                textManagerBody: TextManagerLimeira().getText(),
+                textManagerTitle: TextManagerTitleLimeira().getText(),
+              ),
             ),
             Container(
               color: Colors.white60,
               alignment: Alignment.center,
-              child: const Text('Conteúdo Tab Tres'),
+              child: MapAll(
+                textManagerBody: TextManagerBodyPocos().getText(),
+                textManagerTitle: TextManagerTitlePocos().getText(),
+              ),
             ),
             Container(
               color: Colors.white60,
               alignment: Alignment.center,
-              child: const Text('Conteúdo Tab Quatro'),
+              child: MapAll(
+                textManagerBody: TextManagerBodyGuaruja().getText(),
+                textManagerTitle: TextManagerTitleGuaruja().getText(),
+              ),
             ),
           ],
         ),
