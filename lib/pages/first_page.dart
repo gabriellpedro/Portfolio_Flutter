@@ -35,36 +35,44 @@ class FirstPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            Container(
-              color: Colors.white60,
-              alignment: Alignment.center,
-              child: MapAll(
-                textManagerBody: TextManagerLeme().getText(),
-                textManagerTitle: TextManagerTitleLeme().getText(),
+            SingleChildScrollView(
+              child: Container(
+                color: Colors.white60,
+                alignment: Alignment.center,
+                child: MapAll(
+                  textManagerBody: TextManagerLeme().getText(),
+                  textManagerTitle: TextManagerTitleLeme().getText(),
+                ),
               ),
             ),
-            Container(
-              color: Colors.white60,
-              alignment: Alignment.center,
-              child: MapAll(
-                textManagerBody: TextManagerLimeira().getText(),
-                textManagerTitle: TextManagerTitleLimeira().getText(),
+            SingleChildScrollView(
+              child: Container(
+                color: Colors.white60,
+                alignment: Alignment.center,
+                child: MapAll(
+                  textManagerBody: TextManagerLimeira().getText(),
+                  textManagerTitle: TextManagerTitleLimeira().getText(),
+                ),
               ),
             ),
-            Container(
-              color: Colors.white60,
-              alignment: Alignment.center,
-              child: MapAll(
-                textManagerBody: TextManagerBodyPocos().getText(),
-                textManagerTitle: TextManagerTitlePocos().getText(),
+            SingleChildScrollView(
+              child: Container(
+                color: Colors.white60,
+                alignment: Alignment.center,
+                child: MapAll(
+                  textManagerBody: TextManagerBodyPocos().getText(),
+                  textManagerTitle: TextManagerTitlePocos().getText(),
+                ),
               ),
             ),
-            Container(
-              color: Colors.white60,
-              alignment: Alignment.center,
-              child: MapAll(
-                textManagerBody: TextManagerBodyGuaruja().getText(),
-                textManagerTitle: TextManagerTitleGuaruja().getText(),
+            SingleChildScrollView(
+              child: Container(
+                color: Colors.white60,
+                alignment: Alignment.center,
+                child: MapAll(
+                  textManagerBody: TextManagerBodyGuaruja().getText(),
+                  textManagerTitle: TextManagerTitleGuaruja().getText(),
+                ),
               ),
             ),
           ],

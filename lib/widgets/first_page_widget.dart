@@ -16,32 +16,34 @@ class MapAll extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
 
-    return Container(
-      width: screenWidth * 0.8,
-      alignment: Alignment.center,
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(11, 103, 80, 164),
-        borderRadius: BorderRadius.all(
-          Radius.circular(28),
+    return SingleChildScrollView(
+      child: Container(
+        width: screenWidth * 0.8,
+        alignment: Alignment.center,
+        decoration: const BoxDecoration(
+          color: Color.fromARGB(11, 103, 80, 164),
+          borderRadius: BorderRadius.all(
+            Radius.circular(28),
+          ),
         ),
-      ),
-      padding: const EdgeInsets.all(10),
-      child: Column(
-        children: [
-          Text(
-            textManagerTitle,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Text(
+              textManagerTitle,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            textManagerBody,
-          )
-        ],
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              textManagerBody,
+            )
+          ],
+        ),
       ),
     );
   }
