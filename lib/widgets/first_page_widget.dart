@@ -30,6 +30,7 @@ class MapAll extends StatelessWidget {
         child: Column(
           children: [
             Text(
+              textAlign: TextAlign.center,
               textManagerTitle,
               style: TextStyle(
                 fontSize: 20,

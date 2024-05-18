@@ -15,19 +15,35 @@ class FirstPage extends StatelessWidget {
           title: const Text(
             'Cidades para turismo',
           ),
-          bottom: const TabBar(
+          bottom: TabBar(
             tabs: [
               Tab(
-                child: Text('Leme-SP'),
+                child: Text(
+                  'Leme-SP',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
               Tab(
-                child: Text('Limeira-SP'),
+                child: Text(
+                  'Limeira-SP',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
               Tab(
-                child: Text('Poços de Caldas-MG'),
+                child: Text(
+                  'Poços de Caldas-MG',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
               Tab(
-                child: Text('Guarujá-SP'),
+                child: Text(
+                  'Guarujá-SP',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
             ],
           ),

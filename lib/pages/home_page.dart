@@ -47,6 +47,19 @@ class HomePage extends StatelessWidget {
                   Navigator.of(context).pushNamed('/second_page');
                 },
               ),
+              ListTile(
+                leading: Icon(Icons.radio_button_on_outlined),
+                title: Text('Third Page'),
+                subtitle: Text(
+                  'Clique aqui para navegar para a terceira página.',
+                ),
+                trailing: Icon(
+                  Icons.arrow_right_sharp,
+                ),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/third_page');
+                },
+              ),
             ],
           ),
         ),
